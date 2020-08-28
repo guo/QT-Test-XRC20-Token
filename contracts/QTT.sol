@@ -7,9 +7,9 @@ import './token/ERC20.sol';
 import './token/ERC20Basic.sol';
 import './token/StandardToken.sol';
 
-contract IoTeXNetwork is StandardToken, Pausable {
-    string public constant name = "IoTeX Network";
-    string public constant symbol = "IOTXTEST";
+contract QTT is StandardToken, Pausable {
+    string public constant name = "QTT";
+    string public constant symbol = "QTT";
     uint8 public constant decimals = 18;
 
     modifier validDestination(address to) {
@@ -18,7 +18,7 @@ contract IoTeXNetwork is StandardToken, Pausable {
         _;
     }
 
-    function IoTeXNetwork(uint tokenTotalAmount) {
+    function QTT(uint tokenTotalAmount) {
         totalSupply_ = tokenTotalAmount;
         balances[msg.sender] = tokenTotalAmount;
         emit Transfer(address(0x0), msg.sender, tokenTotalAmount);
